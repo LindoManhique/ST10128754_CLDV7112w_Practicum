@@ -1,0 +1,30 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Sensitive local configuration
+appsettings.Development.json
+local.settings.json
+secrets.json
+
+# Azure publishing files
+*.publishsettings
+PublishProfiles/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Azure deployment metadata
+**/Properties/ServiceDependencies/
+**/Properties/serviceDependencies*.json

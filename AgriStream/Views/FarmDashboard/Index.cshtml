@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Farm Dashboard";
+}
+
+<div class="container mt-4">
+    <h1>AgriStream Farm Dashboard</h1>
+
+    <p>Monitor farm sensor readings and manage irrigation.</p>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Latest Sensor Telemetry</h4>
+        </div>
+
+        <div class="card-body">
+            @if (ViewBag.TelemetryError != null)
+            {
+                <p class="text-danger">@ViewBag.TelemetryError</p>
+            }
+            else
+            {
+                <pre>@ViewBag.Telemetry</pre>
+            }
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Irrigation Control</h4>
+        </div>
+
+        <div class="card-body">
+            <p>Device: IRRIGATION-001</p>
+
+            <form asp-action="TriggerIrrigation" method="post">
+                @Html.AntiForgeryToken()
+
+                <input type="hidden"
+                       name="deviceId"
+                       value="IRRIGATION-001" />
+
+                <button type="submit" class="btn btn-success">
+                    Start Irrigation
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

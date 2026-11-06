@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Drone Image Upload";
+}
+
+<div class="container mt-4">
+    <h1>Drone Image Upload</h1>
+
+    <p>Upload drone images for farm monitoring and processing.</p>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <form asp-action="Upload"
+                  method="post"
+                  enctype="multipart/form-data">
+
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label class="form-label">Select drone image</label>
+
+                    <input type="file"
+                           name="image"
+                           class="form-control"
+                           accept=".jpg,.jpeg,.png,.tif,.tiff"
+                           required />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Upload Image
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

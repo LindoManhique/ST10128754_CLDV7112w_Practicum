@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgriStream", "AgriStream\AgriStream.csproj", "{B1A7BE5B-F70A-4F3E-8D5D-BF4145253E4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgriStream.Functions", "AgriStream.Functions\AgriStream.Functions.csproj", "{C73F4721-4A5B-4B97-927F-7F27514072B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1A7BE5B-F70A-4F3E-8D5D-BF4145253E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A7BE5B-F70A-4F3E-8D5D-BF4145253E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A7BE5B-F70A-4F3E-8D5D-BF4145253E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A7BE5B-F70A-4F3E-8D5D-BF4145253E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73F4721-4A5B-4B97-927F-7F27514072B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73F4721-4A5B-4B97-927F-7F27514072B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73F4721-4A5B-4B97-927F-7F27514072B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73F4721-4A5B-4B97-927F-7F27514072B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0B35E31-4D76-436B-BB94-D463C7481355}
+	EndGlobalSection
+EndGlobal
